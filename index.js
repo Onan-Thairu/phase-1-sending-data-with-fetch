@@ -12,9 +12,9 @@ function submitData(username, email) {
     })
     .then(response => response.json())
     .then(data => {
-        document.querySelector('body').innerHTML = `<p>${data.id}</p>`
+        return document.querySelector('body').innerHTML = `<p>${data.id}</p>`
     })
     .catch(error => {
-        document.querySelector('body').innerHTML = `<p>${error.message}</p>`
+        return document.querySelector('body').innerHTML = `<p>${error.message}</p>`
     })
 }
